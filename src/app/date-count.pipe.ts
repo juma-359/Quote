@@ -5,8 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DateCountPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: any,): number {
+    let today:Date = new Date();
+    let dateDifference = Math.abs(value - todayWithNoTime)
+
+  }
   }
 
 }
