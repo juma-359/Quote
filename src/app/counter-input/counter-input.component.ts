@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+// import { Quote } from '../quote'
 
 @Component({
   selector: 'app-counter-input',
@@ -6,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter-input.component.css']
 })
 export class CounterInputComponent implements OnInit {
+@Input ()
+counterValue = 0;
 
+increament(){
+  this.counterValue++;
+}
+decreament(){
+  this.counterValue++;
+}
   constructor() { }
 
   ngOnInit(): void {
