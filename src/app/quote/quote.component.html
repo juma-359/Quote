@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1>Add your Quote</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i = index'>
+                <div>
+                    <hr>
+                    <br>
+                    <h6 class="card-body">{{quote.name}}, uploaded by {{quote.uploader}}, due on {{quote.competeDate|date|lowercase}}</h6>
+                    <button (click)='toggledetails(i)' class="btn btn-success">Explore</button>
+                </div>
+                <!-- <div *ngIf='quote.showDescription'>
+                    <app-quote-detail [quote]='quote' (isComplete)='completeQuote($event,1)'></app-quote-detail>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+    </div>
+</div>
